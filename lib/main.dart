@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:splitting_into_widgets/TextControl.dart';
 import 'package:splitting_into_widgets/TextWidget.dart';
 
 void main() => runApp(CheckColors());
@@ -40,16 +41,7 @@ class _CheckColorsState extends State<CheckColors> {
                   ? TextWidget(color[_colorIndex])
                   : Center(child: Text("You did it fam")),
             ),
-            Center(
-              child: RaisedButton(
-                onPressed: checkState,
-                child: Text(
-                  "Change Color",
-                  style: TextStyle(color: Colors.white),
-                ),
-                color: Colors.blue,
-              ),
-            )
+            Center(child: TextControl(checkState)),
           ],
         ),
       ),
