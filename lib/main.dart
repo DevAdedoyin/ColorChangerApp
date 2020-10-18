@@ -8,6 +8,20 @@ class CheckColors extends StatefulWidget {
 }
 
 class _CheckColorsState extends State<CheckColors> {
+  var _colorIndex = 0;
+
+  void checkState() {
+    setState(() {
+      _colorIndex += 1;
+    });
+  }
+
+  final color = const [
+    "Red",
+    "White",
+    "Blue",
+  ];
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,19 +32,22 @@ class _CheckColorsState extends State<CheckColors> {
         ),
         body: Column(
           children: [
-            Center(
+            Container(
+              width: double.infinity,
+              margin: EdgeInsets.all(10),
               child: Text(
-                "Red",
+                color[_colorIndex],
                 style: TextStyle(
-                  backgroundColor: Colors.red,
-                  color: Colors.white,
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
                 ),
                 textAlign: TextAlign.center,
               ),
             ),
             Center(
               child: RaisedButton(
-                onPressed: null,
+                onPressed: checkState,
                 child: Text(
                   "Change Color",
                   style: TextStyle(color: Colors.white),
