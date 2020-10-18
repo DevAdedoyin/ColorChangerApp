@@ -27,6 +27,16 @@ class _CheckColorsState extends State<CheckColors> {
                 ),
                 textAlign: TextAlign.center,
               ),
+            ),
+            Center(
+              child: RaisedButton(
+                onPressed: null,
+                child: Text(
+                  "Change Color",
+                  style: TextStyle(color: Colors.white),
+                ),
+                color: Colors.blue,
+              ),
             )
           ],
         ),
