@@ -35,15 +35,17 @@ class _CheckColorsState extends State<CheckColors> {
             Container(
               width: double.infinity,
               margin: EdgeInsets.all(10),
-              child: Text(
-                color[_colorIndex],
-                style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
-                ),
-                textAlign: TextAlign.center,
-              ),
+              child: _colorIndex < color.length
+                  ? Text(
+                      color[_colorIndex],
+                      style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                      textAlign: TextAlign.center,
+                    )
+                  : Text("You did it fam"),
             ),
             Center(
               child: RaisedButton(
