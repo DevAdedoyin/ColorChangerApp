@@ -16,6 +16,20 @@ class _CheckColorsState extends State<CheckColors> {
           title: Text("ROYGBIV"),
           backgroundColor: Colors.red,
         ),
+        body: Column(
+          children: [
+            Center(
+              child: Text(
+                "Red",
+                style: TextStyle(
+                  backgroundColor: Colors.red,
+                  color: Colors.white,
+                ),
+                textAlign: TextAlign.center,
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
